@@ -3,7 +3,7 @@ body {
   padding-top: 0;
 }
 
-h1 {
+#feedback-main h1 {
   font-family: 'Cinzel', sans;
   color: #004346;
   font-weight: bolder;
