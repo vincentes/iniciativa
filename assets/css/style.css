@@ -6,6 +6,7 @@ body {
 .topnav {
   overflow: hidden;
   background-color: #172A3A;
+  z-index: 30;
 }
 
 .topnav a {
@@ -95,3 +96,12 @@ user-select: none;
   }
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
