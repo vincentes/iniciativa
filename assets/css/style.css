@@ -3,6 +3,12 @@ body {
   padding-top: 0;
 }
 
+h1 {
+  font-family: 'Cinzel', sans;
+  color: #004346;
+  font-weight: bolder;
+}
+
 .topnav {
   overflow: hidden;
   background-color: #172A3A;
