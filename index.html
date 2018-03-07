@@ -17,7 +17,7 @@
 		<a class="logo" >Iniciativa</a>
 		<a href="#banner">Inicio</a>
 		<a href="#info">Nosotros</a>
-		<a href="#contacto">Contacto</a>
+		<a href="#contact">Contacto</a>
 		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 	</div>
 
@@ -81,15 +81,34 @@
 		</section>
 
 		<!-- Testimonials -->
-		<section class="wrapper" id="group">
+		<section class="wrapper" id="contact">
 			<div class="inner">
 				<header class="special">
 					<h2>Contactanos</h2>
-					<p>Esta plataforma está mantenida por un grupo de pensadores que se encargan de que el contenido sea accesible y de calidad.</p>
+					  <form method="POST" action="https://formspree.io/thevincentes@gmail.com" style="text-align: left; padding: 30px">
+					  	<div class="row gtr-uniform">
+					  		<div class="col-6 col-12-xsmall">
+					  			<label for="name">Nombre</label>
+								<input type="text" name="name" id="name" value="" placeholder="Nombre">
+							</div>
+					  		<div class="col-6 col-12-xsmall">
+					  			<label for="surname">Apellido</label>
+								<input type="text" name="surname" id="surname" value="" placeholder="Apellido">
+							</div>
+					  		<div class="col-12">
+					  			<label for="name">Email</label>
+								<input type="email" name="email" id="email" value="" placeholder="Email">
+							</div>
+					  		<div class="col-12">
+					  			<label for="name">Idea</label>
+					  			<textarea id="idea" name="idea" rows="10" cols="70"></textarea>
+							</div>
+					  		<div class="col-12">
+					  			<input type="submit" value="Comentar" class="button primary fit" style="text-align: center;">
+							</div>
+					  	</div>
+					  </form>
 				</header>
-				<div class="testimonials">
-					
-				</div>
 			</div>
 		</section>
 
