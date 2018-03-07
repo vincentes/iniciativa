@@ -85,29 +85,38 @@
 			<div class="inner">
 				<header class="special">
 					<h2>Contactanos</h2>
-					  <form method="POST" action="https://formspree.io/thevincentes@gmail.com" style="text-align: left; padding: 30px">
-					  	<div class="row gtr-uniform">
-					  		<div class="col-6 col-12-xsmall">
-					  			<label for="name">Nombre</label>
-								<input type="text" name="name" id="name" value="" placeholder="Nombre">
-							</div>
-					  		<div class="col-6 col-12-xsmall">
-					  			<label for="surname">Apellido</label>
-								<input type="text" name="surname" id="surname" value="" placeholder="Apellido">
-							</div>
-					  		<div class="col-12">
-					  			<label for="name">Email</label>
-								<input type="email" name="email" id="email" value="" placeholder="Email">
-							</div>
-					  		<div class="col-12">
-					  			<label for="name">Idea</label>
-					  			<textarea id="idea" name="idea" rows="10" cols="70"></textarea>
-							</div>
-					  		<div class="col-12">
-					  			<input type="submit" value="Comentar" class="button primary fit" style="text-align: center;">
-							</div>
-					  	</div>
-					  </form>
+					<div class="contact-form">
+					<section>
+						<div class="content">
+						  <form method="POST" action="https://formspree.io/thevincentes@gmail.com" style="text-align: left; padding: 30px">
+						  	<div class="row gtr-uniform">
+						  		<div class="col-6 col-12-xsmall">
+						  			<label for="name">Nombre</label>
+									<input type="text" name="name" id="name" value="" placeholder="Nombre">
+								</div>	
+						  		<div class="col-6 col-12-xsmall">
+						  			<label for="surname">Apellido</label>
+									<input type="text" name="surname" id="surname" value="" placeholder="Apellido">
+								</div>
+						  		<div class="col-12">
+						  			<label for="name">Email</label>
+									<input type="email" name="email" id="email" value="" placeholder="Email">
+								</div>
+						  		<div class="col-12">
+						  			<label for="name">Idea</label>
+						  			<textarea id="idea" name="idea" rows="10" cols="70"></textarea>
+								</div>
+						  		<div class="col-12">
+						  			<input type="submit" value="Comentar" class="button primary fit" style="text-align: center;">
+								</div>
+						  	</div>
+						  	<input type="hidden" name="_next" value="https://iniciativa-web.herokuapp.com/thank-you.html" />
+						  	<input type="hidden" name="_subject" value="Una nueva idea ha sido enviada" />
+						  	<input type="hidden" name="_language" value="es" />
+						  </form>
+						  </div>
+					</section>
+					</div>
 				</header>
 			</div>
 		</section>
@@ -161,7 +170,13 @@
 				}
 
 								// When the user scrolls the page, execute myFunction 
-				window.onscroll = function() {navbarSticky()};
+				window.onscroll = function() {
+					var width = window.innerWidth
+					|| document.documentElement.clientWidth
+					|| document.body.clientWidth;
+					if(width > 600) {
+					navbarSticky();
+				}};
 
 				// Get the navbar
 				var navbar = document.getElementById("myTopnav");
@@ -171,11 +186,11 @@
 
 				// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 				function navbarSticky() {
-				  if (window.pageYOffset >= sticky) {
-				    navbar.classList.add("sticky")
-				  } else {
-				    navbar.classList.remove("sticky");
-				  }
+					if (window.pageYOffset >= sticky) {
+					    navbar.classList.add("sticky")
+					  } else {
+					    navbar.classList.remove("sticky");
+					  }
 				}
 			</script>
 		</body>
